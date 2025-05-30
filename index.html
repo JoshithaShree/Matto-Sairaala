@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Matto Sairaala Promo</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background: #f8f8f8;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #0070c0;
+      }
+      header img {
+        height: 50px;
+      }
+      .lang-switch {
+        cursor: pointer;
+        font-weight: bold;
+      }
+      .lang-switch span {
+        margin: 0 8px;
+      }
+      main {
+        background: #fff;
+        padding: 20px;
+        max-width: 600px;
+        margin: 20px auto;
+        border-radius: 8px;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        color: #0070c0;
+      }
+      .promo-image {
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 15px;
+      }
+      .cta-buttons {
+        margin: 20px 0;
+      }
+      .cta-buttons a {
+        text-decoration: none;
+        background: #0070c0;
+        color: #fff;
+        padding: 12px 20px;
+        margin-right: 10px;
+        border-radius: 5px;
+        display: inline-block;
+      }
+      .cta-buttons a:hover {
+        background: #005a99;
+      }
+      video {
+        width: 100%;
+        border-radius: 8px;
+        margin-top: 15px;
+      }
+      footer {
+        margin-top: 30px;
+        font-size: 0.9em;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img
+        src="https://via.placeholder.com/150x50?text=Matto+Sairaala+Logo"
+        alt="Matto Sairaala Logo"
+      />
+      <div class="lang-switch">
+        <span onclick="switchLang('en')">EN</span> |
+        <span onclick="switchLang('fi')">FI</span>
+      </div>
+    </header>
+
+    <main>
+      <img
+        src="https://via.placeholder.com/600x200?text=Matto+Pesu+Promo"
+        alt="Matto Sairaala Carpet Cleaning"
+        class="promo-image"
+      />
+
+      <h1 id="headline">
+        Spring Cleaning Special – 20% Off Carpet Washing!
+      </h1>
+
+      <div id="promo-details">
+        <p>Valid for on-call customers until June 15</p>
+        <p>Professional deep-cleaning for all carpet types</p>
+        <p>Book online or visit our store</p>
+      </div>
+
+      <div class="cta-buttons">
+        <a
+          href="https://g.co/kgs/hpd87p1"
+          target="_blank"
+          id="visit-store-btn"
+          >Visit Store Today</a
+        >
+        <a
+          href="https://mattosairaala.fi/"
+          target="_blank"
+          id="shop-online-btn"
+          >Book Online</a
+        >
+        <a
+          href="https://www.canva.com/design/DAGo6WtYoao/XbfN8hwB8kVTBxYY5TVs7Q/view?utm_content=DAGo6WtYoao&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hcc510148cd"
+          target="_blank"
+          id="claim-offer-btn"
+          >Claim Your Offer</a
+        >
+      </div>
+
+      <video
+        controls
+        poster="https://via.placeholder.com/600x300?text=Watch+Our+Services"
+      >
+        <source
+          src="https://www.w3schools.com/html/mov_bbb.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+    </main>
+
+    <footer>
+      <p><strong>Contact Info:</strong></p>
+      <p>Address: Street Name, Helsinki, Finland</p>
+      <p>Phone: +358 123 456 789</p>
+      <p>Opening Hours: 9am – 9pm</p>
+    </footer>
+
+    <script>
+      const texts = {
+        en: {
+          headline: "Spring Cleaning Special – 20% Off Carpet Washing!",
+          promoDetails: `<p>Valid for on-call customers until June 15</p>
+                         <p>Professional deep-cleaning for all carpet types</p>
+                         <p>Book online or visit our store</p>`,
+          visitStore: "Visit Store Today",
+          shopOnline: "Book Online",
+          claimOffer: "Claim Your Offer",
+        },
+        fi: {
+          headline: "Kevätsiivoustarjous – 20% alennus mattopesusta!",
+          promoDetails: `<p>Voimassa ajanvarauksella 15. kesäkuuta asti</p>
+                         <p>Ammattimainen syväpuhdistus kaikille mattotyypeille</p>
+                         <p>Varaa verkossa tai käy liikkeessä</p>`,
+          visitStore: "Vieraile myymälässä",
+          shopOnline: "Varaa verkossa",
+          claimOffer: "Lunasta tarjous",
+        },
+      };
+
+      function switchLang(lang) {
+        document.getElementById("headline").innerHTML = texts[lang].headline;
+        document.getElementById("promo-details").innerHTML = texts[lang].promoDetails;
+        document.getElementById("visit-store-btn").textContent = texts[lang].visitStore;
+        document.getElementById("shop-online-btn").textContent = texts[lang].shopOnline;
+        document.getElementById("claim-offer-btn").textContent = texts[lang].claimOffer;
+      }
+    </script>
+  </body>
+</html>
